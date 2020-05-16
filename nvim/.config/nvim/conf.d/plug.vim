@@ -1,0 +1,15 @@
+call plug#begin(stdpath('data') . '/plugged')
+Plug 'preservim/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'unblevable/quick-scope'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'jreybert/vimagit'
+Plug 'justinmk/vim-sneak'
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-commentary'
+Plug 'andymass/vim-matchup'
+call plug#end()

@@ -1,0 +1,14 @@
+syntax enable
+set hidden
+set encoding=utf-8
+set fileencoding=utf-8
+set mouse=a
+set number
+set nowrap
+set cursorline
+set clipboard=unnamedplus
+set tabstop=2
+set shiftwidth=2
+set updatetime=300
+set undofile
+set autoread
