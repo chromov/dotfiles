@@ -2,7 +2,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
+Plug 'chromov/gruvbox-material'
 Plug 'unblevable/quick-scope'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
