@@ -1,0 +1,79 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+command=~/.config/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+min_width=xxxxxxxx
+align=center
+
+[mediaplayer]
+interval=5
+signal=10
+
+[ssid]
+label= 
+interval=60
+
+[bandwidth]
+instance=wlp4s0;in
+label=
+interval=1
+
+[bandwidth]
+instance=wlp4s0;out
+label=
+interval=1
+
+[battery]
+label=
+instance=0
+interval=5
+
+[memory]
+label=
+instance=mem;used
+interval=10
+
+[cpu]
+label=
+interval=2
+
+[weather]
+instance=702550
+interval=60
+
+[brightness]
+label=
+interval=5
+
+[audio]
+label=
+interval=5
+
+
+[datetime]
+label=
+instance=%Y-%m-%d %H:%M
+interval=5
+
+

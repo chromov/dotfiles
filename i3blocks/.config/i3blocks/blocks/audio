@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Left click
+if [[ "${BLOCK_BUTTON}" -eq 4 ]]; then
+  pactl set-sink-volume 0 +10%
+  #amixer -q sset Master 5%+
+# Middle click
+elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+  pactl set-sink-mute 0 toggle
+  #amixer -q sset Master toggle
+# Right click
+elif [[ "${BLOCK_BUTTON}" -eq 5 ]]; then
+  pactl set-sink-volume 0 -10%
+  #amixer -q sset Master 5%-
+elif [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  i3-msg -q "exec --no-startup-id pavucontrol"
+fi
+
+statusLine=$(amixer get Master | tail -n 1)
+status=$(echo "${statusLine}" | grep -wo "on")
+volume=$(echo "${statusLine}" | awk -F ' ' '{print $5}' | tr -d '[]%')
+
+if [[ "${status}" == "on" ]]; then
+  echo "${volume}%"
+  echo "${volume}%"
+  echo ""
+else
+  echo "off"
+  echo "off"
+  echo ""
+fi

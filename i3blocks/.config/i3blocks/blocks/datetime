@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  i3-msg -q "exec --no-startup-id gnome-calendar"
+fi
+
+FORMAT="${BLOCK_INSTANCE:-%H:%M}"
+DATETIME=$(date "+${FORMAT}")
+
+echo "${DATETIME}"
+echo "${DATETIME}"
+echo ""
