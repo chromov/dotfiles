@@ -4,3 +4,5 @@
 [color "status"]
 	changed = blue
 	untracked = blue
+[color "diff"]
+	old = yellow
