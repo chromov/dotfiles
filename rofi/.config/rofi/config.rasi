@@ -1,0 +1,10 @@
+configuration {
+	modi: "window,run,ssh,drun";
+	width: 500;
+	lines: 10;
+	columns: 1;
+	padding: 20;
+	show-icons: true;
+	line-margin: 5;
+	line-padding: 5;
+}

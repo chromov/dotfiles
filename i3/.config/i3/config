@@ -39,7 +39,7 @@ client.urgent                #cd989a #cd989a #2e3436
 
 client.background			#1d1d1d
 
-set $Locker i3lock --color=000000 && sleep 1
+set $Locker dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -222,25 +222,10 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
-bindsym $mod+plus exec --no-startup-id "j4-dmenu-desktop"
+bindsym $mod+plus exec --no-startup-id "rofi -show drun"
 bindsym $mod+grave workspace Remotes; exec --no-startup-id "rofi -show ssh"
 
-# Toggle between hide state and show state
-bindsym $mod+m bar mode toggle bar-s
-
-#bindsym XF86LaunchA exec xrandr --output eDP-1 --auto && xrandr --output HDMI-1 --off && xrandr --output HDMI-2 --off
-#bindsym XF86Explorer exec xrandr --output HDMI-2 --auto && xrandr --output HDMI-1 --auto --right-of HDMI-2 && exec xrandr --output eDP-1 --off
-
-bindsym $mod+Shift+Prior exec xrandr --output DP2-3 --auto && xrandr --output eDP1 --off && xrandr --output DP2-2 --auto --right-of DP2-3 --primary && xrandr --output DP2-1 --auto --right-of DP2-2
-bindsym $mod+Shift+Next exec xrandr --output DP2-2 --off --output eDP1 --primary --auto --output DP2-1 --off --output DP2-3 --off
-
 bindsym Shift+Print exec --no-startup-id "flameshot gui"
-
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10%
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
-
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
 focus_follows_mouse no
 
@@ -268,7 +253,8 @@ bar {
   output DP2-2
   output eDP1
   output DP1
-  tray_output DP1
+  output LVDS1
+  tray_output LVDS1
   tray_output eDP1
   tray_output DP2-2
   workspace_buttons yes
@@ -288,7 +274,5 @@ bar {
   }
 }
 
-exec --no-startup-id "gnome-settings-daemon"
 exec --no-startup-id "nm-applet"
-exec --no-startup-id "kbdd && fbxkb"
-exec --no-startup-id xss-lock -- $Locker
+exec --no-startup-id "fbxkb"
