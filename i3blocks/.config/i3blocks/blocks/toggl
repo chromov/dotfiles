@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  i3-msg -q "exec --no-startup-id sensible-browser https://toggl.com/app/timer"
+  sleep .5
+  i3-msg -q '[urgent="latest"] focus'
+fi
+
+STATUS=$(toggl status)
+
+echo "${STATUS}"
+echo "${STATUS}"
+echo ""

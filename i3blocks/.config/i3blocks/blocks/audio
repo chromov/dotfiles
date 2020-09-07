@@ -2,15 +2,15 @@
 
 # Left click
 if [[ "${BLOCK_BUTTON}" -eq 4 ]]; then
-  pactl set-sink-volume 0 +10%
+  pactl set-sink-volume @DEFAULT_SINK@ +10%
   #amixer -q sset Master 5%+
 # Middle click
 elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
-  pactl set-sink-mute 0 toggle
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
   #amixer -q sset Master toggle
 # Right click
 elif [[ "${BLOCK_BUTTON}" -eq 5 ]]; then
-  pactl set-sink-volume 0 -10%
+  pactl set-sink-volume @DEFAULT_SINK@ -10%
   #amixer -q sset Master 5%-
 elif [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
   i3-msg -q "exec --no-startup-id pavucontrol"

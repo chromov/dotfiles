@@ -1,12 +1,20 @@
 map <Space> <Leader>
 map <Leader>p :NERDTreeToggle<CR>
-nnoremap <leader>gs :Magit<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiffsplit<CR>
 "nnoremap <TAB> :bnext<CR>
 "nnoremap <S-TAB> :bprevious<CR>
 map <C-B> :BufExplorer<CR>
 "nmap <Leader>ga <Plug>(GitGutterStageHunk)
 "nmap <Leader>gu <Plug>(GitGutterUndoHunk)
 
+nnoremap <leader>tn :TestNearest<CR>
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>ts :TestSuite<CR>
+nnoremap <leader>tl :TestLast<CR>
+nnoremap <leader>tv :TestVisit<CR>
+
+vmap <LeftRelease> "*ygv
 map gS <Plug>Sneak_,
 map gs <Plug>Sneak_;
 

@@ -1,6 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-  name = Dmytro Khromov
+	name = Dmytro Khromov
+	email = dmytro.khromov@innocode.no
 [color "status"]
 	changed = blue
 	untracked = blue

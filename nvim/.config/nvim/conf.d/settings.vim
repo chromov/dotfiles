@@ -7,8 +7,10 @@ set number
 set nowrap
 set cursorline
 set clipboard=unnamedplus
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set updatetime=300
 set undofile
 set autoread
+set title

@@ -12,4 +12,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-commentary'
 Plug 'andymass/vim-matchup'
+Plug 'vim-test/vim-test'
+Plug 'tpope/vim-projectionist'
+Plug 'caironoleto/vim-projectionist-elixir'
+Plug 'tpope/vim-unimpaired'
 call plug#end()

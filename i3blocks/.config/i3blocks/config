@@ -30,9 +30,12 @@ align=center
 interval=5
 signal=10
 
-[ssid]
-label= 
-interval=60
+[toggl]
+interval=5
+
+# [ssid]
+# label= 
+# interval=60
 
 [bandwidth]
 instance=wlp4s0;in
