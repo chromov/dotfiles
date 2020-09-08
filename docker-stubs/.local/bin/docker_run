@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cur_dir=${PWD##*/} 
+if docker-compose ps --services | grep -q "^$cur_dir$"; then
+	docker-compose run --rm "$cur_dir" "$@"
+fi
