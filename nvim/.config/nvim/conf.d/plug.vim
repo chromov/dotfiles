@@ -16,4 +16,10 @@ Plug 'vim-test/vim-test'
 Plug 'tpope/vim-projectionist'
 Plug 'caironoleto/vim-projectionist-elixir'
 Plug 'tpope/vim-unimpaired'
+Plug 'christianrondeau/vim-base64'
+Plug 'lervag/wiki.vim'
+Plug 'lervag/wiki-ft.vim'
+" Plug 'nvim-neorg/neorg'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()

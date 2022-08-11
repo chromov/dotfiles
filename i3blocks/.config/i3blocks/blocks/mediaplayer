@@ -32,7 +32,7 @@ use constant ICON_PLAY => "";
 use constant ICON_PAUSE => "";
 
 my @metadata = ();
-my $player_arg = "";
+my $player_arg = "--player='spotify'";
 
 if ($BLOCK_INSTANCE) {
     $player_arg = "--player='$BLOCK_INSTANCE'";
@@ -136,7 +136,8 @@ sub playerctl {
     my $title = qx(playerctl $player_arg metadata title);
     exit(0) if $? || $title eq '(null)';
 
-    my $status = qx(playerctl $player_arg -i chromium status);
+    # my $status = qx(playerctl $player_arg -i chromium status);
+    my $status = qx(playerctl $player_arg status);
 
     my $status_icon = ICON_PAUSE;
 

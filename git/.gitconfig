@@ -7,3 +7,5 @@
 	untracked = blue
 [color "diff"]
 	old = yellow
+[pull]
+	rebase = false

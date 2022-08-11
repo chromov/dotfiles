@@ -76,7 +76,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker-compose kubectl)
+plugins=(git docker-compose kubectl dotenv)
+
+alias kapp='keti $(kgp -o name | grep app | head -1) -- bash'
+
+ZSH_DOTENV_PROMPT=false
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,6 +88,8 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt inc_append_history
 unsetopt share_history
+
+export HUSKY_SKIP_HOOKS=1
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

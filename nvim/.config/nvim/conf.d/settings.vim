@@ -14,3 +14,11 @@ set updatetime=300
 set undofile
 set autoread
 set title
+
+" set foldmethod=syntax
+" set foldnestmax=10
+" set nofoldenable
+" set foldcolumn=2
+
+" autocmd BufWinLeave *.* mkview
+" autocmd BufWinEnter *.* silent loadview

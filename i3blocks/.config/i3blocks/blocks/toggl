@@ -1,9 +1,24 @@
 #!/bin/bash
 
+if [[ $_SKIP_TOGGL -eq 1 ]]; then
+  echo "timer stopped"
+  echo "timer stop"
+  echo ""
+  exit 0
+fi
+
 if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
-  i3-msg -q "exec --no-startup-id sensible-browser https://toggl.com/app/timer"
+  i3-msg -q "exec --no-startup-id sensible-browser https://track.toggl.com/timer"
   sleep .5
   i3-msg -q '[urgent="latest"] focus'
+fi
+
+if [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+  export _SKIP_TOGGL=1
+fi
+
+if [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+  export _SKIP_TOGGL=0
 fi
 
 STATUS=$(toggl status)

@@ -1,6 +1,7 @@
 map <Space> <Leader>
 map <Leader>p :NERDTreeToggle<CR>
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gd :Gdiffsplit<CR>
 "nnoremap <TAB> :bnext<CR>
 "nnoremap <S-TAB> :bprevious<CR>
@@ -20,6 +21,8 @@ map gs <Plug>Sneak_;
 
 nnoremap <Leader>/ :Commentary<CR>
 vnoremap <Leader>/ :Commentary<CR>
+
+nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
