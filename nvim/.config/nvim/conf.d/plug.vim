@@ -19,6 +19,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'christianrondeau/vim-base64'
 Plug 'lervag/wiki.vim'
 Plug 'lervag/wiki-ft.vim'
+Plug 'shumphrey/fugitive-gitlab.vim'
 " Plug 'nvim-neorg/neorg'
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

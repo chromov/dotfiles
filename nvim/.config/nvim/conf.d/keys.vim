@@ -1,7 +1,8 @@
 map <Space> <Leader>
 map <Leader>p :NERDTreeToggle<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gb :Git blame<CR>
+nnoremap <leader>gB :GBrowse<CR>
 nnoremap <leader>gd :Gdiffsplit<CR>
 "nnoremap <TAB> :bnext<CR>
 "nnoremap <S-TAB> :bprevious<CR>
