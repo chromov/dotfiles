@@ -78,9 +78,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker-compose kubectl dotenv)
 
-alias kapp='keti $(kgp -o name | grep app | head -1) -- bash'
+alias kapp='keti $(kgp -o name | grep app | head -1) -- /bin/sh'
+alias kesec='kubectl edit secret'
+alias kgpr='kgp --field-selector=status.phase=Running'
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 ZSH_DOTENV_PROMPT=false
+export KUBE_EDITOR=vim
 
 source $ZSH/oh-my-zsh.sh
 
