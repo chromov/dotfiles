@@ -48,4 +48,23 @@ M.b64 = {
   }
 }
 
+M.nvterm = {
+  t = {
+    ["<leader>tt"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "toggle floating term",
+    },
+  },
+  n = {
+    ["<leader>tt"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "toggle floating term",
+    },
+  }
+}
+
 return M

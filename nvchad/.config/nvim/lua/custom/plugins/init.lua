@@ -59,6 +59,23 @@ return {
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   },
+
+  ["NvChad/nvterm"] = {
+    override_options = {
+      terminals = {
+        type_opts = {
+          float = {
+            relative = "editor",
+            row = 0.05,
+            col = 0.1,
+            width = 0.8,
+            height = 0.8,
+            border = "single",
+          },
+        },
+      },
+    }
+  },
   ["neovim/nvim-lspconfig"] = false,
   ["williamboman/mason.nvim"] = false,
   ["lukas-reineke/indent-blankline.nvim"] = false
