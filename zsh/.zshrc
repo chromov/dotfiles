@@ -5,6 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/dmitri/incoming/google-cloud-sdk/path.zsh.inc' ]; then . '/home/dmitri/incoming/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/dmitri/incoming/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/dmitri/incoming/google-cloud-sdk/completion.zsh.inc'; fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -76,7 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker-compose kubectl dotenv)
+plugins=(kubectl git docker-compose docker z thefuck ripgrep fd)
 
 alias kapp='keti $(kgp -o name | grep app | head -1) -- /bin/sh'
 alias kesec='kubectl edit secret'
@@ -90,6 +96,7 @@ export KUBE_EDITOR=vim
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+eval $(keychain --eval --quiet --noask id_ed25519 id_rsa)
 
 unsetopt inc_append_history
 unsetopt share_history
@@ -122,3 +129,9 @@ export HUSKY_SKIP_HOOKS=1
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+alias l='exa -G --icons --group-directories-first'
+alias ll='exa -l --icons --group-directories-first'
+alias la='exa -la --icons --group-directories-first'
+alias ldo='lazydocker'
+alias lg='lazygit'
