@@ -2,10 +2,35 @@
 [user]
 	name = Dmytro Khromov
 	email = dmytro.khromov@innocode.no
+
 [color "status"]
 	changed = blue
 	untracked = blue
+
 [color "diff"]
 	old = yellow
+
 [pull]
 	rebase = false
+
+[core]
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[delta]
+  features = decorations
+
+[delta "interactive"]
+  keep-plus-minus-markers = false
+
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#98971a"
+  hunk-header-style = file line-number syntax
+  syntax-theme = gruvbox-dark
