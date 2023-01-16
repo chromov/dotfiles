@@ -82,7 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(kubectl git docker-compose docker z thefuck ripgrep fd)
+plugins=(kubectl git docker-compose docker z thefuck ripgrep fd zsh-autosuggestions)
 
 alias kapp='keti $(kgp -o name | grep app | head -1) -- /bin/sh'
 alias kesec='kubectl edit secret'
