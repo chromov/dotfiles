@@ -12,26 +12,29 @@ return {
       }
     }
   },
-  ["kyazdani42/nvim-tree.lua"] = {
-    override_options = {
-      git = {
-        enable = true,
-      },
-
-      renderer = {
-        highlight_git = true
-      }
-    }
-  },
-  ["kyazdani42/nvim-web-devicons"] = {
-    override_options = {
-      override = {
-        rb = {
-          icon = "",
-          name = "rb",
-        },
-      }
-    }
+  -- ["nvim-tree/nvim-tree.lua"] = {
+  --   override_options = {
+  --     git = {
+  --       enable = true,
+  --     },
+  --
+  --     renderer = {
+  --       highlight_git = true
+  --     }
+  --   }
+  -- },
+  -- ["nvim-tree/nvim-web-devicons"] = {
+  --   override_options = {
+  --     override = {
+  --       rb = {
+  --         icon = "",
+  --         name = "rb",
+  --       },
+  --     }
+  --   }
+  -- },
+  ["windwp/nvim-spectre"] = {
+    wants = "nvim-lua/plenary.nvim",
   },
   ["taybart/b64.nvim"] = {},
   ["rcarriga/nvim-notify"] = {},
@@ -50,6 +53,9 @@ return {
       })
     end,
   },
+  ["sindrets/diffview.nvim"] = {
+    wants = "nvim-lua/plenary.nvim",
+  },
   ["ckolkey/ts-node-action"] = {
     wants = "nvim-treesitter",
   },
@@ -58,6 +64,15 @@ return {
     config = function ()
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
+  },
+
+  ["nvim-treesitter/nvim-treesitter"] = {
+    override_options = {
+      indent = {
+        enable = true,
+        disable = {"ruby"}
+      }
+    }
   },
 
   ["NvChad/nvterm"] = {
@@ -76,7 +91,13 @@ return {
       },
     }
   },
-  ["neovim/nvim-lspconfig"] = false,
+  ["lspcontainers/lspcontainers.nvim"] = {},
+  ["neovim/nvim-lspconfig"] = {
+    config = function()
+      require "plugins.configs.lspconfig"
+      -- require "custom.plugins.lspconfig"
+    end,
+  },
   ["williamboman/mason.nvim"] = false,
   ["lukas-reineke/indent-blankline.nvim"] = false
 }

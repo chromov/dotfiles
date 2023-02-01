@@ -9,7 +9,8 @@ M.mouse_helper = {
 
 M.general = {
   n = {
-    ["<CR>"] = { ":nohlsearch<CR><CR>", "clear hl", {silent = true, remap = false} }
+    ["<CR>"] = { ":nohlsearch<CR><CR>", "clear hl", {silent = true, remap = false} },
+    ["<C-x>"] = { ":qall<CR>", "quit all", {remap = false} }
   }
 }
 
@@ -32,6 +33,7 @@ M.telescope = {
   n = {
     ["<leader>fb"] = { "<cmd> Telescope buffers sort_mru=true <CR>", "find buffers" },
     ["<C-b>"] = { "<cmd> Telescope buffers sort_mru=true <CR>", "find buffers" },
+    ["<leader>fd"] = { "<cmd> Telescope grep_string <CR>", "find word" },
   }
 }
 
@@ -64,6 +66,12 @@ M.nvterm = {
       end,
       "toggle floating term",
     },
+  }
+}
+
+M.spectre = {
+  n = {
+    ["<leader>S"] = { "<cmd>lua require('spectre').open()<CR>", "search and replace", {remap = false} }
   }
 }
 
