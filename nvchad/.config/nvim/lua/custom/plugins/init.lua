@@ -12,27 +12,27 @@ return {
       }
     }
   },
-  -- ["nvim-tree/nvim-tree.lua"] = {
-  --   override_options = {
-  --     git = {
-  --       enable = true,
-  --     },
-  --
-  --     renderer = {
-  --       highlight_git = true
-  --     }
-  --   }
-  -- },
-  -- ["nvim-tree/nvim-web-devicons"] = {
-  --   override_options = {
-  --     override = {
-  --       rb = {
-  --         icon = "",
-  --         name = "rb",
-  --       },
-  --     }
-  --   }
-  -- },
+  ["nvim-tree/nvim-tree.lua"] = {
+    override_options = {
+      git = {
+        enable = true,
+      },
+
+      renderer = {
+        highlight_git = true
+      }
+    }
+  },
+  ["nvim-tree/nvim-web-devicons"] = {
+    override_options = {
+      override = {
+        rb = {
+          icon = "",
+          name = "rb",
+        },
+      }
+    }
+  },
   ["windwp/nvim-spectre"] = {
     wants = "nvim-lua/plenary.nvim",
   },
