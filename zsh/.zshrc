@@ -12,7 +12,7 @@ if [ -f '/home/dmitri/incoming/google-cloud-sdk/path.zsh.inc' ]; then . '/home/d
 if [ -f '/home/dmitri/incoming/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/dmitri/incoming/google-cloud-sdk/completion.zsh.inc'; fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/dmitri/.oh-my-zsh"
