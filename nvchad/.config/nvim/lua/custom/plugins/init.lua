@@ -70,10 +70,24 @@ return {
     override_options = {
       indent = {
         enable = true,
-        disable = {"ruby"}
+        disable = {"ruby", "elixir", "eex", "eelixir"}
+      },
+      highlight = {
+        enable = true,
+        disable = {"elixir", "eex", "eelixir"}
       }
     }
   },
+
+  ["elixir-editors/vim-elixir"] = {},
+  ["AckslD/nvim-neoclip.lua"] = {
+    wants = "nvim-telescope/telescope.nvim",
+    config = function()
+      require('neoclip').setup()
+    end
+  },
+
+  ["vim-test/vim-test"] = {},
 
   ["NvChad/nvterm"] = {
     override_options = {
@@ -91,13 +105,17 @@ return {
       },
     }
   },
-  ["lspcontainers/lspcontainers.nvim"] = {},
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
-      -- require "custom.plugins.lspconfig"
+      require "custom.plugins.lspconfig"
     end,
   },
-  ["williamboman/mason.nvim"] = false,
+  ['WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'] = {
+    config = function()
+      require('toggle_lsp_diagnostics').init(vim.diagnostic.config())
+    end
+  },
+  -- ["williamboman/mason.nvim"] = false,
   ["lukas-reineke/indent-blankline.nvim"] = false
 }

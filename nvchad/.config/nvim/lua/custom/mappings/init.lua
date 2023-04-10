@@ -34,12 +34,33 @@ M.telescope = {
     ["<leader>fb"] = { "<cmd> Telescope buffers sort_mru=true <CR>", "find buffers" },
     ["<C-b>"] = { "<cmd> Telescope buffers sort_mru=true <CR>", "find buffers" },
     ["<leader>fd"] = { "<cmd> Telescope grep_string <CR>", "find word" },
+    ["<leader>dl"] = { "<cmd> Telescope diagnostics <CR>", "diagnostics" },
+  }
+}
+
+M.lsp = {
+  n = {
+    ["]d"] = {
+      function()
+        vim.diagnostic.goto_next()
+      end,
+      "goto_next",
+    },
+    ["<F7>"] = { "<Plug>(toggle-lsp-diag-vtext)", "toggle diagnostics"}
+  }
+}
+
+M.neotest = {
+  n = {
+    ["<leader>tn"] = { ":TestNearest<CR>", "run nearest test" },
+    ["<leader>tf"] = { ":TestFile<CR>", "run file tests" },
+    ["<leader>tl"] = { ":TestLast<CR>", "run last test" }
   }
 }
 
 M.node_action = {
   n = {
-    ["K"] = { require("ts-node-action").node_action, "trigger node action" }
+    ["<leader>k"] = { require("ts-node-action").node_action, "trigger node action" }
   }
 }
 
