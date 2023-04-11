@@ -6,3 +6,4 @@ vim.g.gruvbox_material_show_eob = 0
 vim.g.gruvbox_material_colors_override = {
   bg_dim = { "#222222", "235" },
 }
+vim.g.matchup_matchparen_offscreen = { method = "popup" }
