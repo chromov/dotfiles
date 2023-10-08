@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 eval $(keychain --eval --quiet --noask id_ed25519 id_rsa)
 
-unsetopt inc_append_history
+setopt inc_append_history
 unsetopt share_history
 
 export HUSKY_SKIP_HOOKS=1

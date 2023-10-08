@@ -25,7 +25,7 @@ return {
       },
       highlight = {
         enable = true,
-        disable = { "elixir", "eex", "eelixir" },
+        disable = { "ruby", "elixir", "eex", "eelixir" },
       },
     },
   },
@@ -34,6 +34,7 @@ return {
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
   {
     "echasnovski/mini.comment",
+    lazy = false,
     opts = {
       mappings = {
         comment = "<leader>/",
@@ -175,6 +176,10 @@ return {
         winblend = 0,
       },
     },
+    keys = {
+      { "<leader>/", false },
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files (root dir)" },
+    },
   },
   {
     "neovim/nvim-lspconfig",
@@ -240,6 +245,7 @@ return {
       },
     },
   },
+  { "echasnovski/mini.pairs", enabled = false },
 
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
@@ -263,10 +269,28 @@ return {
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
 
+      local function border(hl_name)
+        return {
+          { "╭", hl_name },
+          { "─", hl_name },
+          { "╮", hl_name },
+          { "│", hl_name },
+          { "╯", hl_name },
+          { "─", hl_name },
+          { "╰", hl_name },
+          { "│", hl_name },
+        }
+      end
+
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 
+      opts.completion = {
+        completeopt = "menu,menuone,noselect",
+      }
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
