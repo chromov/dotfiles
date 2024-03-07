@@ -109,8 +109,9 @@ exec swayidle -w\
     set $wksp6 "6:Superlocal"
     set $wksp7 "7:Deals"
     set $wksp8 "8:Calendar"
-    set $wksp9 "9:Paloma"
+    set $wksp9 "9:Socials"
     set $wksp10 "10:Personal"
+    set $wksp15 "15:Community"
 
     # Switch to workspace
     bindsym $mod+1 workspace $wksp1
@@ -128,7 +129,7 @@ exec swayidle -w\
     bindsym $mod+Ctrl+2 workspace number 12
     bindsym $mod+Ctrl+3 workspace number 13
     bindsym $mod+Ctrl+4 workspace number 14
-    bindsym $mod+Ctrl+5 workspace number 15
+    bindsym $mod+Ctrl+5 workspace $wksp15
     bindsym $mod+Ctrl+6 workspace number 16
     bindsym $mod+Ctrl+7 workspace number 17
     bindsym $mod+Ctrl+8 workspace number 18
@@ -151,7 +152,7 @@ exec swayidle -w\
     bindsym $mod+Ctrl+Shift+2 move container to workspace number 12
     bindsym $mod+Ctrl+Shift+3 move container to workspace number 13
     bindsym $mod+Ctrl+Shift+4 move container to workspace number 14
-    bindsym $mod+Ctrl+Shift+5 move container to workspace number 15
+    bindsym $mod+Ctrl+Shift+5 move container to workspace $wksp15
     bindsym $mod+Ctrl+Shift+6 move container to workspace number 16
     bindsym $mod+Ctrl+Shift+7 move container to workspace number 17
     bindsym $mod+Ctrl+Shift+8 move container to workspace number 18
