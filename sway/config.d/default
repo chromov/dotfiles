@@ -272,7 +272,7 @@ $bindcode $mod+r mode "resize"
 #
 # Screenshots
 #
-    bindsym print exec /usr/share/sway/scripts/grimshot --notify save area - | swappy -f -
+    bindsym print exec /usr/share/sway-contrib/grimshot --notify save area - | swappy -f -
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 #
 # Keybindings List

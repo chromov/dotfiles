@@ -130,6 +130,9 @@ export HUSKY_SKIP_HOOKS=1
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+bindkey '\e[13;5u' autosuggest-execute
+bindkey '^@' autosuggest-accept
+
 alias l='exa -G --icons --group-directories-first'
 alias ll='exa -l --icons --group-directories-first'
 alias la='exa -la --icons --group-directories-first'
