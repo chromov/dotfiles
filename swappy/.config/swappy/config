@@ -1,0 +1,4 @@
+[Default]
+early_exit=true
+save_dir=$HOME/Pictures/scr
+save_filename_format=%Y%m%d-%H%M%S.png
