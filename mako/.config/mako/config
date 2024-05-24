@@ -1,0 +1,24 @@
+font=UbuntuMono 12.5
+
+background-color=#404552
+text-color=#e5e9f0
+height=250
+padding=15
+margin=10
+progress-color=over #eceff480
+icon-path=/usr/share/icons/Gruvbox-Material-Dark
+max-icon-size=70
+layer=overlay
+
+border-size=1
+border-radius=10
+border-color=#333333
+
+default-timeout=7000
+anchor=bottom-right
+
+[urgency=high]
+
+default-timeout=10000
+border-color=#9452e2
+border-size=2
