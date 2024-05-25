@@ -29,6 +29,7 @@ return {
       },
     },
   },
+  { "folke/flash.nvim", enabled = false }, -- disable search labels
   { "akinsho/bufferline.nvim", enabled = false },
   { "echasnovski/mini.indentscope", enabled = false },
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
@@ -39,6 +40,7 @@ return {
       mappings = {
         comment = "<leader>/",
         comment_line = "<leader>/",
+        comment_visual = "<leader>/",
       },
     },
   },
