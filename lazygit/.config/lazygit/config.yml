@@ -1,0 +1,15 @@
+gui:
+  mouseEvents: false
+  showFileTree: false
+  showIcons: true
+  theme:
+    unstagedChangesColor:
+      - magenta
+    selectedLineBgColor:
+      - reverse
+    selectedRangeBgColor:
+      - reverse
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
