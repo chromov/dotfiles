@@ -2,6 +2,22 @@ local util = require("lspconfig.util")
 
 return {
   {
+    "stevearc/conform.nvim",
+    opts = function(_, opts)
+      opts.formatters.sqlfluff = {
+        args = { "format", "--dialect=postgres", "-" },
+      }
+    end,
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = function(_, opts)
+      opts.linters.sqlfluff = {
+        args = { "lint", "--dialect=postgres", "-" },
+      }
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {

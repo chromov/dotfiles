@@ -8,3 +8,9 @@ vim.g.gruvbox_material_colors_override = {
 }
 vim.g.matchup_matchparen_offscreen = { method = "popup" }
 vim.wo.relativenumber = false
+
+vim.filetype.add({
+  extension = {
+    ["http"] = "http",
+  },
+})
