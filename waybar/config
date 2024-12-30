@@ -11,9 +11,9 @@
         "sway/mode",
     ],
  
-    "modules-center": [
-      "custom/media"
-    ],
+    //"modules-center": [
+      //"custom/media"
+    //],
 
     "modules-right": [
         "network",
